@@ -7,13 +7,14 @@ import { Link } from "react-router-dom";
 const Banner = () => {
   return (
     <div className={style.banner}>
-      <div className={style.banner__logo}>
-        <img src={bannerLogo} alt="logo" />
-      </div>
+      <Link to="/conversion">
+        <div className={style.banner__logo}>
+          <img src={bannerLogo} alt="logo" />
+        </div>
 
-      <Link to="/">
-        <p>GET</p>
-        <img src={gift} alt="gift" />
+        <Link to="/">
+          <img src={gift} alt="gift" />
+        </Link>
       </Link>
     </div>
   );

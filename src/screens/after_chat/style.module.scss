@@ -28,6 +28,8 @@
 }
 
 .after_chat__content {
+  height: 100%;
+
   h1 {
     font-size: 40px;
     font-family: "NunitoSand-eb", sans-serif;
@@ -167,12 +169,14 @@
 }
 
 .after_chat__person__second {
+  height: 100%;
+
   img {
     width: 250% !important;
   }
 
   button {
-    margin-top: 140px !important;
+    margin-top: 85px !important;
   }
 
   .after_chat__message {
@@ -210,10 +214,16 @@
   .after_chat__messages {
     margin-top: 200px;
     width: 100% !important;
+
+    @media (max-width: 450px) {
+      margin-top: 100px;
+    }
   }
 
   button {
-    top: 90%;
+    @media (max-width: 450px) {
+      top: 75%;
+    }
   }
 }
 

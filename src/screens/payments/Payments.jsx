@@ -79,7 +79,7 @@ const Starter = () => {
             </ul>
           </div>
 
-          <Link to="/">OK, let’s try!</Link>
+          <Link to="/graphick-first">OK, let’s try!</Link>
         </div>
       </div>
     </section>

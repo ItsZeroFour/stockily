@@ -7,7 +7,7 @@ import bannerSecondaryLogo from "../../assets/images/banner_secondary_logo.svg";
 const BannerSecondary = () => {
   return (
     <div className={style.banner}>
-      <Link to="/after-chat?index=5" target="_blank" rel="noreferrer">
+      <Link to="/conversion">
         <img src={bannerImg} alt="banner iphone" />
         <div className={style.banner__main}>
           <img src={bannerSecondaryLogo} alt="logo" />
