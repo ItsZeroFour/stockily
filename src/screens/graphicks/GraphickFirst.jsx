@@ -72,7 +72,7 @@ const GraphickFirst = () => {
             animationData={animationData}
             loop={false}
             autoplay={false}
-            style={{ width: "105%", height: 320 }}
+            style={{ width: "100%", height: 300 }}
           />
 
           <div className={style.graphick_first__buttons}>
