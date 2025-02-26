@@ -93,7 +93,12 @@ const FirstChat = () => {
                   <img src={sisterImageAvatar} alt="sister avatar" />
                 </div>
                 <div className={style.first__chat__message__content}>
-                  <p>Deni, hey! <br /> You asked me to find out from my mother what she wanted for her birthday. Of course, she said that she didn't want anything, but her old TV doesn't work very well anymore...</p>
+                  <p>
+                    Deni, hey! <br /> You asked me to find out from my mother
+                    what she wanted for her birthday. Of course, she said that
+                    she didn't want anything, but her old TV doesn't work very
+                    well anymore...
+                  </p>
                 </div>
               </motion.div>
             )}
@@ -107,7 +112,10 @@ const FirstChat = () => {
                 transition={transition}
               >
                 <div className={style.first__chat__message__content}>
-                  <p>Hey, sis! Yes, I remember it. I'm a little short of money, but I know what to do.</p>
+                  <p>
+                    Hey, sis! Yes, I remember it. I'm a little short of money,
+                    but I know what to do.
+                  </p>
                 </div>
                 <div className={style.first__chat__message__avatar}>
                   <img src={personalImageAvatar} alt="personal avatar" />
@@ -127,7 +135,7 @@ const FirstChat = () => {
                 to="/after-chat"
                 className={`${style.fadeInLink} ${showLink && style.show}`}
               >
-                {t("goToSiteButton")}
+                Go to Stockity
               </Link>
             </motion.div>
           )}

@@ -24,8 +24,8 @@ const Final = () => {
           <div className={style.final__content}>
             <h1>Register at Stockity.id</h1>
             <p>
-              Enter promo code GAME1000 in the deposit section and get a chance
-              to win $200!
+              Enter promo code TRADINGHERO in the deposit section and get a
+              chance to win new iPhone 16 PRO or $500 on your balance!
             </p>
 
             <div className={style.final__img}>
@@ -37,7 +37,7 @@ const Final = () => {
             </Link>
 
             <div className={style.final__bottom}>
-              <p>Stay in the game</p>
+              <Link to="/">Stay in the game</Link>
               <Link to="/">Promotion rules</Link>
             </div>
           </div>

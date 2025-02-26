@@ -1,11 +1,12 @@
 import React from "react";
 import style from "./style.module.scss";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import tab from "../../assets/images/Tab.png";
 import { useTranslation } from "react-i18next";
 
 const Conversion = () => {
   const { t } = useTranslation();
+  const navigate = useNavigate();
 
   const handleLeadTracking = () => {
     if (window.fbq !== undefined) {
@@ -24,8 +25,8 @@ const Conversion = () => {
           <div className={style.final__content}>
             <h1>Register at Stockity.id</h1>
             <p>
-            Enter promo code TRADINGHEROin the deposit section and get a chance to win new iPhone 16 PRO 
-            or $500 on your balance!
+              Enter promo code TRADINGHEROin the deposit section and get a
+              chance to win new iPhone 16 PRO or $500 on your balance!
             </p>
 
             <div className={style.final__img}>
@@ -37,7 +38,9 @@ const Conversion = () => {
             </Link>
 
             <div className={style.final__bottom}>
-              <p>Stay in the game</p>
+              <Link to="" onClick={() => navigate(-1)}>
+                Stay in the game
+              </Link>
               <Link to="/">Promotion rules</Link>
             </div>
           </div>

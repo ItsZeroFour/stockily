@@ -86,7 +86,7 @@ const AfterChat = () => {
                 <img src={afterChatPerson2} alt="after chat 2" />
 
                 <button onClick={() => setShowScreenIndex(2)}>
-                  {t("afterChat3Button")}
+                  What I have to do here?
                 </button>
               </div>
             ) : showScreenIndex === 1 ? (
@@ -114,7 +114,7 @@ const AfterChat = () => {
                 <img src={afterChatPerson2} alt="after chat 2" />
 
                 <button onClick={() => setShowScreenIndex(2)}>
-                  {t("afterChat3Button")}
+                  What I have to do here?
                 </button>
               </div>
             ) : showScreenIndex === 2 ? (

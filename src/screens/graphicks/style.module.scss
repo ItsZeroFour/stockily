@@ -126,6 +126,15 @@
     span {
       font-size: 120px;
       line-height: 120px;
+
+      @media (max-width: 450px) {
+        font-size: 60px;
+        line-height: 60px;
+      }
+    }
+
+    @media (max-width: 450px) {
+      font-size: 52px;
     }
   }
 
