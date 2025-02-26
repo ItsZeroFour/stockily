@@ -11,6 +11,7 @@
   flex-direction: column;
   align-items: center;
 
+
   @media (max-width: 450px) {
     border: none;
     border-radius: 0;
@@ -21,6 +22,7 @@
     flex-direction: column;
     justify-content: space-between;
     height: 400px;
+    padding-top: 40px;
     position: relative;
 
     z-index: 1;
@@ -29,6 +31,7 @@
       font-size: 30px;
       text-align: center;
       text-transform: uppercase;
+      color: #161616;
     }
 
     .main__content__navigation {
@@ -122,6 +125,8 @@
         }
       }
 
+      margin-bottom: -40px;
+
       @media (max-width: 380px) {
         width: 160px;
       }
@@ -143,7 +148,7 @@
   .main__hand__image {
     position: absolute;
     // left: 13%;
-    top: 60px;
+    top: 120px;
 
     img {
       @media (max-width: 450px) {

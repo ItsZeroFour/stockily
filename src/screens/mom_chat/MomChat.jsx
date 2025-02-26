@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
 import style from "./style.module.scss";
 import { motion } from "framer-motion";
-import sisterImageAvatar from "../../assets/images/sister_avatar.png";
+import sisterImageAvatar from "../../assets/images/mom.png";
 import personalImageAvatar from "../../assets/images/personal_avatar.png";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import Banner from "../../components/banner/Banner";
 import BannerSecondary from "../../components/banner_secondary/BannerSecondary";
 
-const FirstChat = () => {
+const MomChat = () => {
   const [showFirstMessage, setShowFirstMessage] = useState(false);
   const [showSecondMessage, setShowSecondMessage] = useState(false);
   const [showLink, setShowLink] = useState(false);
@@ -18,11 +18,11 @@ const FirstChat = () => {
   useEffect(() => {
     const firstMessageTimer = setTimeout(() => {
       setShowFirstMessage(true);
-    }, 0);
+    }, 2000);
 
     const secondMessageTimer = setTimeout(() => {
       setShowSecondMessage(true);
-    }, 2000);
+    }, 0);
 
     const linkTimer = setTimeout(() => {
       setShowLink(true);
@@ -77,13 +77,33 @@ const FirstChat = () => {
               <img src={sisterImageAvatar} alt="Sister" />
             </div>
 
-            <h3>{t("sister")}</h3>
+            <h3>Mom</h3>
           </div>
 
           <div className={style.first__chat__history}>
+            {showSecondMessage && (
+              <motion.div
+                className={`${style.first__chat__message}`}
+                initial="hidden"
+                animate="visible"
+                variants={secondMessageVariants}
+                transition={transition}
+              >
+                <div className={style.first__chat__message__content}>
+                  <p>
+                    Mom, happy birthday! My gift is on its way to you... try to
+                    guess what it is 📺 😂
+                  </p>
+                </div>
+                <div className={style.first__chat__message__avatar}>
+                  <img src={personalImageAvatar} alt="personal avatar" />
+                </div>
+              </motion.div>
+            )}
+
             {showFirstMessage && (
               <motion.div
-                className={style.first__chat__message}
+                className={`${style.first__chat__message} ${style.first__chat__message__last}`}
                 initial="hidden"
                 animate="visible"
                 variants={firstMessageVariants}
@@ -93,24 +113,11 @@ const FirstChat = () => {
                   <img src={sisterImageAvatar} alt="sister avatar" />
                 </div>
                 <div className={style.first__chat__message__content}>
-                  <p>Deni, hey! <br /> You asked me to find out from my mother what she wanted for her birthday. Of course, she said that she didn't want anything, but her old TV doesn't work very well anymore...</p>
-                </div>
-              </motion.div>
-            )}
-
-            {showSecondMessage && (
-              <motion.div
-                className={`${style.first__chat__message} ${style.first__chat__message__last}`}
-                initial="hidden"
-                animate="visible"
-                variants={secondMessageVariants}
-                transition={transition}
-              >
-                <div className={style.first__chat__message__content}>
-                  <p>Hey, sis! Yes, I remember it. I'm a little short of money, but I know what to do.</p>
-                </div>
-                <div className={style.first__chat__message__avatar}>
-                  <img src={personalImageAvatar} alt="personal avatar" />
+                  <p>
+                    Honey, thank you ❤️❤️❤️ This is definitely something that
+                    will allow your dad to watch his endless fishing and boxing
+                    shows 😂😂😂
+                  </p>
                 </div>
               </motion.div>
             )}
@@ -124,10 +131,10 @@ const FirstChat = () => {
               transition={{ duration: 0.5 }}
             >
               <Link
-                to="/after-chat"
+                to="/final"
                 className={`${style.fadeInLink} ${showLink && style.show}`}
               >
-                {t("goToSiteButton")}
+                Get your prize
               </Link>
             </motion.div>
           )}
@@ -137,4 +144,4 @@ const FirstChat = () => {
   );
 };
 
-export default FirstChat;
+export default MomChat;

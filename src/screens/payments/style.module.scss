@@ -60,7 +60,6 @@
       width: 31.4%;
       height: 100px;
 
-      
       background: #f3f3f3;
 
       display: flex;
@@ -68,6 +67,25 @@
       align-items: center;
 
       border-radius: 5px;
+
+      @media (max-width: 385px) {
+        width: 31%;
+      }
+    }
+  }
+}
+
+.payments__wrapper {
+  a {
+    padding: 10px;
+    border-radius: 30px;
+    background: var(--color-blue);
+    width: 100%;
+    margin-top: auto;
+    text-align: center;
+
+    @media (max-width: 450px) {
+      margin-bottom: 70px;
     }
   }
 }

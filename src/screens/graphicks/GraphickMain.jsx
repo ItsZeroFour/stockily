@@ -1,0 +1,42 @@
+import React, { useEffect, useState } from "react";
+import style from "./style.module.scss";
+import graphick from "../../assets/graphicks/third-graphick.json";
+import Lottie from "lottie-react";
+import { Link } from "react-router-dom";
+
+const GraphickMain = () => {
+  const [showButton, setShowButton] = useState(false);
+
+  useEffect(() => {
+    const showButton = setTimeout(() => {
+      setShowButton(true);
+    }, 5000);
+
+    return () => {
+      clearTimeout(showButton);
+    };
+  }, []);
+
+  return (
+    <section className={style.graphick_main}>
+      <div className="container">
+        <div className={`wrapper ${style.graphick_main__wrapper}`}>
+          <h1>
+            Nеxt few days... <br /> <span>🗓️</span>
+          </h1>
+
+          <Lottie
+            animationData={graphick}
+            loop={false}
+            autoplay={true}
+            style={{ width: "110%", height: 300 }}
+          />
+
+          {showButton && <Link to="/gift">+1500000 ₹</Link>}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default GraphickMain;

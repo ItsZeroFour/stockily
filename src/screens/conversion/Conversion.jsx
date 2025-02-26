@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import tab from "../../assets/images/Tab.png";
 import { useTranslation } from "react-i18next";
 
-const Final = () => {
+const Conversion = () => {
   const { t } = useTranslation();
 
   const handleLeadTracking = () => {
@@ -24,8 +24,8 @@ const Final = () => {
           <div className={style.final__content}>
             <h1>Register at Stockity.id</h1>
             <p>
-              Enter promo code GAME1000 in the deposit section and get a chance
-              to win $200!
+            Enter promo code TRADINGHEROin the deposit section and get a chance to win new iPhone 16 PRO 
+            or $500 on your balance!
             </p>
 
             <div className={style.final__img}>
@@ -47,4 +47,4 @@ const Final = () => {
   );
 };
 
-export default Final;
+export default Conversion;
