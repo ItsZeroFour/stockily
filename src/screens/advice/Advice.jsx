@@ -27,7 +27,7 @@ const Advice = () => {
             <img src={afterChatPerson3} alt="after chat 3" />
 
             <button onClick={() => navigate("/advice-sec")}>
-              How to top up?
+            And what I have to do? 
             </button>
           </div>
         </div>
