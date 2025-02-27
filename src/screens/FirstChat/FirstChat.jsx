@@ -5,7 +5,6 @@ import sisterImageAvatar from "../../assets/images/sister_avatar.png";
 import personalImageAvatar from "../../assets/images/personal_avatar.png";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import Banner from "../../components/banner/Banner";
 import BannerSecondary from "../../components/banner_secondary/BannerSecondary";
 
 const FirstChat = () => {
@@ -22,6 +21,9 @@ const FirstChat = () => {
 
     const secondMessageTimer = setTimeout(() => {
       setShowSecondMessage(true);
+      if (window.ym) {
+        window.ym(100071464, "reachGoal", "sister");
+      }
     }, 2000);
 
     const linkTimer = setTimeout(() => {
@@ -94,10 +96,7 @@ const FirstChat = () => {
                 </div>
                 <div className={style.first__chat__message__content}>
                   <p>
-                    Deni, hey! <br /> You asked me to find out from my mother
-                    what she wanted for her birthday. Of course, she said that
-                    she didn't want anything, but her old TV doesn't work very
-                    well anymore...
+                    {t("firstChatHello")} <br /> {t("firstChatMessage1")}
                   </p>
                 </div>
               </motion.div>
@@ -112,10 +111,7 @@ const FirstChat = () => {
                 transition={transition}
               >
                 <div className={style.first__chat__message__content}>
-                  <p>
-                    Hey, sis! Yes, I remember it. I'm a little short of money,
-                    but I know what to do.
-                  </p>
+                  <p>{t("firstChatMessage2")}</p>
                 </div>
                 <div className={style.first__chat__message__avatar}>
                   <img src={personalImageAvatar} alt="personal avatar" />
@@ -132,10 +128,15 @@ const FirstChat = () => {
               transition={{ duration: 0.5 }}
             >
               <Link
+                onClick={async () => {
+                  if (window.ym) {
+                    await window.ym(100071464, "reachGoal", "Andi 1 ");
+                  }
+                }}
                 to="/after-chat"
                 className={`${style.fadeInLink} ${showLink && style.show}`}
               >
-                Go to Stockity
+                {t("fitstChatButton")}
               </Link>
             </motion.div>
           )}

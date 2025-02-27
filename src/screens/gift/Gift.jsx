@@ -1,9 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import mainImg from "../../assets/images/tv.png";
 import style from "./style.module.scss";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const Gift = () => {
+  const { t } = useTranslation();
+
+  useEffect(() => {
+    if (window.ym) {
+      window.ym(100071464, "reachGoal", "TV");
+    }
+  }, []);
+
   return (
     <section className={style.gift}>
       <div className="container">
@@ -21,22 +30,22 @@ const Gift = () => {
             <h4>Samsung 56gn12 TV</h4>
             <h2>2 000 000 Rp</h2>
 
-            <Link to="">Read it 77 reviews</Link>
+            <Link to="">{t("giftReviews")}</Link>
           </div>
 
           <ul className={style.gift__characteristicks__bottom}>
             <li>
-              <p>Pick up at the store</p>
+              <p>{t("giftPickUp")}</p>
               <p>15 min</p>
             </li>
 
             <li>
-              <p>Delivery</p>
-              <p>From $3.4, tomorrow</p>
+              <p>{t("giftDelivery")}</p>
+              <p>{t("giftFrom")}</p>
             </li>
           </ul>
 
-          <Link to="/mom">Buy gift for mom</Link>
+          <Link to="/mom">{t("giftButton")}</Link>
         </div>
       </div>
     </section>

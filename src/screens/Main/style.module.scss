@@ -11,7 +11,6 @@
   flex-direction: column;
   align-items: center;
 
-
   @media (max-width: 450px) {
     border: none;
     border-radius: 0;
@@ -42,6 +41,10 @@
       .main__button__down,
       .main__button__up {
         text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
 
         .main__button__down__icon,
         .main__button__up__icon {

@@ -67,26 +67,18 @@ const AfterChat = () => {
               >
                 <div className={style.after_chat__messages}>
                   <div className={style.after_chat__message}>
-                    <p>
-                      Hi, I'm Andi! A few years ago, I, like you, knew nothing
-                      about trading. But now I understand what needs to be done
-                      here and am ready to give you a tour!
-                    </p>
+                    <p>{t("afterChatMessage1")}</p>
                   </div>
 
                   <div className={style.after_chat__message}>
-                    <p>
-                      We are on Stockity, a cutting-edge trading platform
-                      designed to empower traders with the best tools and
-                      services in the financial market. 
-                    </p>
+                    <p>{t("afterChatMessage2")}</p>
                   </div>
                 </div>
 
                 <img src={afterChatPerson2} alt="after chat 2" />
 
                 <button onClick={() => setShowScreenIndex(2)}>
-                  What I have to do here?
+                  {t("afterChatButton1")}
                 </button>
               </div>
             ) : showScreenIndex === 1 ? (
@@ -95,26 +87,18 @@ const AfterChat = () => {
               >
                 <div className={style.after_chat__messages}>
                   <div className={style.after_chat__message}>
-                    <p>
-                      Hi, I'm Andi! A few years ago, I, like you, knew nothing
-                      about trading. But now I understand what needs to be done
-                      here and am ready to give you a tour!
-                    </p>
+                    <p>{t("afterChatMessage1")}</p>
                   </div>
 
                   <div className={style.after_chat__message}>
-                    <p>
-                      We are on Stockity, a cutting-edge trading platform
-                      designed to empower traders with the best tools and
-                      services in the financial market. 
-                    </p>
+                    <p>{t("afterChatMessage2")}</p>
                   </div>
                 </div>
 
                 <img src={afterChatPerson2} alt="after chat 2" />
 
                 <button onClick={() => setShowScreenIndex(2)}>
-                  What I have to do here?
+                  {t("afterChatButton1")}
                 </button>
               </div>
             ) : showScreenIndex === 2 ? (
@@ -123,18 +107,14 @@ const AfterChat = () => {
               >
                 <div className={style.after_chat__messages}>
                   <div className={style.after_chat__message}>
-                    <p>
-                      You have to predict whether the price of an asset will
-                      rise or fall within a specified time frame, with a fixed
-                      payout if your prediction is correct.
-                    </p>
+                    <p>{t("afterChatMessage3")}</p>
                   </div>
                 </div>
 
                 <img src={afterChatPerson3} alt="after chat 3" />
 
                 <button onClick={() => setShowScreenIndex(3)}>
-                  Can I earn money here?
+                  {t("afterChatButton2")}
                 </button>
               </div>
             ) : showScreenIndex === 3 ? (
@@ -143,18 +123,14 @@ const AfterChat = () => {
               >
                 <div className={style.after_chat__messages}>
                   <div className={style.after_chat__message}>
-                    <p>
-                      Yes! Trade amount starting from $1 so you won't lose a
-                      large amount of funds while you're still learning how to
-                      trade.
-                    </p>
+                    <p>{t("afterChatMessage4")}</p>
                   </div>
                 </div>
 
                 <img src={afterChatPerson3} alt="after chat 3" />
 
                 <button onClick={() => navigate("/payments")}>
-                  How to top up?
+                  {t("afterChatButton3")}
                 </button>
               </div>
             ) : showScreenIndex === 4 ? (

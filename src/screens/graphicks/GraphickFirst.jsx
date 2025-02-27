@@ -7,12 +7,14 @@ import Lottie from "lottie-react";
 import arrowTop from "../../assets/icons/arrow_top.svg";
 import arrowBottom from "../../assets/icons/arrow_bottom.svg";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const GraphickFirst = () => {
   const [animationData, setAnimationData] = useState(graphickTop);
   const [isClick, setIsClick] = useState(false);
   const lottieRef = useRef(null);
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   const handleButtonClick = (direction) => {
     const newAnimationData =
@@ -53,7 +55,7 @@ const GraphickFirst = () => {
             <img src={afterChatPerson5} alt="person" />
             <div className={style.graphick_first__top__text}>
               <h4>Mohammed Shami</h4>
-              <p>You have to predict whether the graph will go up or down</p>
+              <p>{t("graphickFirstText")}</p>
             </div>
           </div>
 
@@ -80,10 +82,10 @@ const GraphickFirst = () => {
               onClick={() => handleButtonClick("down")}
               disabled={isClick}
             >
-              Down <img src={arrowBottom} alt="bottom" />
+              {t("graphickFirstButton1")} <img src={arrowBottom} alt="bottom" />
             </button>
             <button onClick={() => handleButtonClick("top")} disabled={isClick}>
-              Top <img src={arrowTop} alt="top" />
+              {t("graphickFirstButton2")} <img src={arrowTop} alt="top" />
             </button>
           </div>
         </div>

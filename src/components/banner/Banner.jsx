@@ -7,7 +7,14 @@ import { Link } from "react-router-dom";
 const Banner = () => {
   return (
     <div className={style.banner}>
-      <Link to="/conversion">
+      <Link
+        to="/conversion"
+        onClick={async () => {
+          if (window.ym) {
+            await window.ym(100071464, "reachGoal", "banner");
+          }
+        }}
+      >
         <div className={style.banner__logo}>
           <img src={bannerLogo} alt="logo" />
         </div>

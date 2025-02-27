@@ -3,9 +3,11 @@ import style from "./style.module.scss";
 import Banner from "../../components/banner/Banner";
 import { useNavigate } from "react-router-dom";
 import afterChatPerson3 from "../../assets/images/after-chat-3.png";
+import { useTranslation } from "react-i18next";
 
 const Advice = () => {
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   return (
     <section className={style.advice}>
@@ -18,16 +20,14 @@ const Advice = () => {
           >
             <div className={style.after_chat__messages}>
               <div className={style.after_chat__message}>
-                <p>
-                  No, you are wrong! But I have some advice on how to trade.
-                </p>
+                <p>{t("adviceText1")}</p>
               </div>
             </div>
 
             <img src={afterChatPerson3} alt="after chat 3" />
 
             <button onClick={() => navigate("/advice-sec")}>
-            And what I have to do? 
+              {t("adviceButton1")}
             </button>
           </div>
         </div>
