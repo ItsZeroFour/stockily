@@ -3,11 +3,17 @@ import style from "./style.module.scss";
 import graphick from "../../assets/graphicks/third-graphick.json";
 import Lottie from "lottie-react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const GraphickMain = () => {
   const [showButton, setShowButton] = useState(false);
+  const { t } = useTranslation();
 
   useEffect(() => {
+    if (window.ym) {
+      window.ym(100071464, "reachGoal", "stonks");
+    }
+
     const showButton = setTimeout(() => {
       setShowButton(true);
     }, 5000);
@@ -22,7 +28,7 @@ const GraphickMain = () => {
       <div className="container">
         <div className={`wrapper ${style.graphick_main__wrapper}`}>
           <h1>
-            Nеxt few days... <br /> <span>🗓️</span>
+            {t("graphick2Text")} <br /> <span>🗓️</span>
           </h1>
 
           <Lottie

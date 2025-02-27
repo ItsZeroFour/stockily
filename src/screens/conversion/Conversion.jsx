@@ -24,24 +24,21 @@ const Conversion = () => {
         <div className={`wrapper ${style.final__wrapper}`}>
           <div className={style.final__content}>
             <h1>Register at Stockity.id</h1>
-            <p>
-              Enter promo code TRADINGHEROin the deposit section and get a
-              chance to win new iPhone 16 PRO or $500 on your balance!
-            </p>
+            <p>{t("finalText")}</p>
 
             <div className={style.final__img}>
               <img src={tab} alt="tab" />
             </div>
 
             <Link onClick={() => handleLeadTracking()} to="">
-              GET A CHANCE
+              {t("finalButton")}
             </Link>
 
             <div className={style.final__bottom}>
               <Link to="" onClick={() => navigate(-1)}>
-                Stay in the game
+                {t("finalStay")}
               </Link>
-              <Link to="/">Promotion rules</Link>
+              <Link to="/">{t("finalRules")}</Link>
             </div>
           </div>
         </div>

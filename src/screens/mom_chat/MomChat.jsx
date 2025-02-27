@@ -90,10 +90,7 @@ const MomChat = () => {
                 transition={transition}
               >
                 <div className={style.first__chat__message__content}>
-                  <p>
-                    Mom, happy birthday! My gift is on its way to you... try to
-                    guess what it is 📺 😂
-                  </p>
+                  <p>{t("momChatMessage1")}</p>
                 </div>
                 <div className={style.first__chat__message__avatar}>
                   <img src={personalImageAvatar} alt="personal avatar" />
@@ -113,11 +110,7 @@ const MomChat = () => {
                   <img src={sisterImageAvatar} alt="sister avatar" />
                 </div>
                 <div className={style.first__chat__message__content}>
-                  <p>
-                    Honey, thank you ❤️❤️❤️ This is definitely something that
-                    will allow your dad to watch his endless fishing and boxing
-                    shows 😂😂😂
-                  </p>
+                  <p>{t("momChatMessage2")}</p>
                 </div>
               </motion.div>
             )}
@@ -131,10 +124,15 @@ const MomChat = () => {
               transition={{ duration: 0.5 }}
             >
               <Link
+                onClick={async () => {
+                  if (window.ym) {
+                    window.ym(100071464, "reachGoal", "prize");
+                  }
+                }}
                 to="/final"
                 className={`${style.fadeInLink} ${showLink && style.show}`}
               >
-                Get your prize
+                {t("momChatButton")}
               </Link>
             </motion.div>
           )}

@@ -7,8 +7,11 @@ import usCan from "../../assets/images/flags/us-can.png";
 import usJpn from "../../assets/images/flags/us-jpn.png";
 import euUs from "../../assets/images/flags/eu-us.png";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const Main = () => {
+  const { t } = useTranslation();
+
   return (
     <section className={style.advice_main}>
       <div className="contaioner">
@@ -17,11 +20,7 @@ const Main = () => {
             <img src={afterChatPerson5} alt="person" />
             <div className={style.advice_main__top__text}>
               <h4>Mohammed Shami</h4>
-              <p>
-                I I advise you to trade not just like that, but based on
-                economic data. Stokity has a calendar for tracking important
-                reports.
-              </p>
+              <p>{t("adviceText2")}</p>
             </div>
           </div>
 
@@ -108,7 +107,7 @@ const Main = () => {
             </li>
           </ul>
 
-          <Link to="/graphick-main">Go it!</Link>
+          <Link to="/graphick-main">{t("adviceButton2")}</Link>
         </div>
       </div>
     </section>
