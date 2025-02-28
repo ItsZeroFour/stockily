@@ -31,14 +31,21 @@
   display: flex;
   align-items: center;
   gap: 10px;
+  position: relative;
+  overflow: hidden;
 
   img {
-    width: 110px !important;
+    width: 160px !important;
     height: auto;
+    top: 5%;
+    left: -5%;
     object-fit: contain;
+    position: absolute;
   }
 
   .graphick_first__top__text {
+    margin-left: 135px;
+    padding: 10px;
     p {
       text-align: left;
       margin-top: 5px;

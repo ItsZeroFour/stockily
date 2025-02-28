@@ -20,7 +20,7 @@ const Starter = () => {
           <Banner />
 
           <h1>STOCKITY TRADING GAME</h1>
-          <p>Complete our interactive storytelling and get a chance to</p>
+          <p>Complete our interactive storytelling and get a chance to win a PRIZE</p>
 
           <img src={manImg} alt="manImg" />
 

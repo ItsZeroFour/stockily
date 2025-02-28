@@ -2,7 +2,7 @@ import React from "react";
 import style from "./style.module.scss";
 import Banner from "../../components/banner/Banner";
 import { useNavigate } from "react-router-dom";
-import afterChatPerson3 from "../../assets/images/after-chat-3.png";
+import afterChatPerson3 from "../../assets/images/main_person/2.png";
 import { useTranslation } from "react-i18next";
 
 const Advice = () => {

@@ -1,6 +1,6 @@
 import React from "react";
 import style from "./style.module.scss";
-import afterChatPerson5 from "../../assets/images/after-chat-5.png";
+import afterChatPerson5 from "../../assets/images/main_person/1-1.png";
 import ausCan from "../../assets/images/flags/aus-can.png";
 import euCan from "../../assets/images/flags/eu-can.png";
 import usCan from "../../assets/images/flags/us-can.png";
@@ -19,7 +19,7 @@ const Main = () => {
           <div className={style.advice_main__top}>
             <img src={afterChatPerson5} alt="person" />
             <div className={style.advice_main__top__text}>
-              <h4>Mohammed Shami</h4>
+              <h4>Andi</h4>
               <p>{t("adviceText2")}</p>
             </div>
           </div>

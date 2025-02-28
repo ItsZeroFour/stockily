@@ -46,5 +46,7 @@
   "finalText": "Enter promo code TRADINGHERO in the deposit section and get a chance to win new iPhone 16 PRO or $500 on your balance!",
   "finalButton": "GET A CHANCE",
   "finalStay": "Stay in the game",
-  "finalRules": "Promotion rules"
+  "finalRules": "Promotion rules",
+
+  "graphickMainButton" : "Go to the shop"
 }

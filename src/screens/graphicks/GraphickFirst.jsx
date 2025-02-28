@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import style from "./style.module.scss";
-import afterChatPerson5 from "../../assets/images/after-chat-5.png";
+import afterChatPerson5 from "../../assets/images/main_person/1-1.png";
 import graphickTop from "../../assets/graphicks/from_top_to_bottom.json";
 import graphickBottom from "../../assets/graphicks/from_bottom_to_top.json";
 import Lottie from "lottie-react";
@@ -54,7 +54,7 @@ const GraphickFirst = () => {
           <div className={style.graphick_first__top}>
             <img src={afterChatPerson5} alt="person" />
             <div className={style.graphick_first__top__text}>
-              <h4>Mohammed Shami</h4>
+              <h4>Andi</h4>
               <p>{t("graphickFirstText")}</p>
             </div>
           </div>
@@ -77,17 +77,23 @@ const GraphickFirst = () => {
             style={{ width: "100%", height: 300 }}
           />
 
-          <div className={style.graphick_first__buttons}>
-            <button
-              onClick={() => handleButtonClick("down")}
-              disabled={isClick}
-            >
-              {t("graphickFirstButton1")} <img src={arrowBottom} alt="bottom" />
-            </button>
-            <button onClick={() => handleButtonClick("top")} disabled={isClick}>
-              {t("graphickFirstButton2")} <img src={arrowTop} alt="top" />
-            </button>
-          </div>
+          {!isClick && (
+            <div className={style.graphick_first__buttons}>
+              <button
+                onClick={() => handleButtonClick("down")}
+                disabled={isClick}
+              >
+                {t("graphickFirstButton1")}{" "}
+                <img src={arrowBottom} alt="bottom" />
+              </button>
+              <button
+                onClick={() => handleButtonClick("top")}
+                disabled={isClick}
+              >
+                {t("graphickFirstButton2")} <img src={arrowTop} alt="top" />
+              </button>
+            </div>
+          )}
         </div>
       </div>
     </section>

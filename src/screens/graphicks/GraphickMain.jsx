@@ -38,7 +38,7 @@ const GraphickMain = () => {
             style={{ width: "110%", height: 300 }}
           />
 
-          {showButton && <Link to="/gift">+1500000 ₹</Link>}
+          {showButton && <Link to="/gift">{t("graphickMainButton")}</Link>}
         </div>
       </div>
     </section>

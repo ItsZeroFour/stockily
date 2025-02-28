@@ -29,14 +29,21 @@
   display: flex;
   align-items: center;
   gap: 10px;
+  position: relative;
+  overflow: hidden;
 
   img {
-    width: 110px !important;
+    width: 160px !important;
     height: auto;
+    top: 5%;
+    left: -5%;
     object-fit: contain;
+    position: absolute;
   }
 
   .payments__top__text {
+    margin-left: 130px;
+    padding: 10px;
     p {
       text-align: left;
       margin-top: 5px;
@@ -58,7 +65,7 @@
 
     li {
       width: 31.4%;
-      height: 90px;
+      height: 110px;
 
       background: #f3f3f3;
 
@@ -68,8 +75,13 @@
 
       border-radius: 5px;
 
+      img {
+        width: 50%;
+      }
+
       @media (max-width: 385px) {
         width: 31%;
+        height: 90px;
       }
     }
   }

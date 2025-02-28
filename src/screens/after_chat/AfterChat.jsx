@@ -3,14 +3,15 @@ import style from "./style.module.scss";
 import logo from "../../assets/images/logo_2.svg";
 import afterChatImg from "../../assets/images/after_chat.png";
 import afterChatPerson1 from "../../assets/images/after-chat-1.png";
-import afterChatPerson2 from "../../assets/images/after-chat-2.png";
-import afterChatPerson3 from "../../assets/images/after-chat-3.png";
+import afterChatPerson2 from "../../assets/images/main_person/1-1.png";
+import afterChatPerson3 from "../../assets/images/main_person/5.png";
 import afterChatPerson4 from "../../assets/images/after-chat-4.png";
 import afterChatPerson5 from "../../assets/images/after-chat-5.png";
 import tabImg from "../../assets/images/Tab.png";
 import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import Banner from "../../components/banner/Banner";
+import { motion } from "framer-motion";
 
 const preloadImages = (sources) => {
   sources.forEach((src) => {
@@ -54,6 +55,15 @@ const AfterChat = () => {
     ]);
   }, []);
 
+  const messageVariants = {
+    hidden: { opacity: 0, y: 10 },
+    visible: (delay) => ({
+      opacity: 1,
+      y: 0,
+      transition: { delay, duration: 0.5, ease: "easeOut" },
+    }),
+  };
+
   return (
     <section className={style.after_chat}>
       <div className="container">
@@ -66,40 +76,76 @@ const AfterChat = () => {
                 className={`${style.after_chat__person} ${style.after_chat__person__second}`}
               >
                 <div className={style.after_chat__messages}>
-                  <div className={style.after_chat__message}>
+                  <motion.div
+                    className={style.after_chat__message}
+                    variants={messageVariants}
+                    initial="hidden"
+                    animate="visible"
+                    custom={0} // Без задержки
+                  >
                     <p>{t("afterChatMessage1")}</p>
-                  </div>
+                  </motion.div>
 
-                  <div className={style.after_chat__message}>
+                  <motion.div
+                    className={style.after_chat__message}
+                    variants={messageVariants}
+                    initial="hidden"
+                    animate="visible"
+                    custom={2}
+                  >
                     <p>{t("afterChatMessage2")}</p>
-                  </div>
+                  </motion.div>
                 </div>
 
                 <img src={afterChatPerson2} alt="after chat 2" />
 
-                <button onClick={() => setShowScreenIndex(2)}>
+                <motion.button
+                  onClick={() => setShowScreenIndex(2)}
+                  variants={messageVariants}
+                  initial="hidden"
+                  animate="visible"
+                  custom={3}
+                >
                   {t("afterChatButton1")}
-                </button>
+                </motion.button>
               </div>
             ) : showScreenIndex === 1 ? (
               <div
                 className={`${style.after_chat__person} ${style.after_chat__person__second}`}
               >
                 <div className={style.after_chat__messages}>
-                  <div className={style.after_chat__message}>
+                  <motion.div
+                    className={style.after_chat__message}
+                    variants={messageVariants}
+                    initial="hidden"
+                    animate="visible"
+                    custom={0} // Без задержки
+                  >
                     <p>{t("afterChatMessage1")}</p>
-                  </div>
+                  </motion.div>
 
-                  <div className={style.after_chat__message}>
+                  <motion.div
+                    className={style.after_chat__message}
+                    variants={messageVariants}
+                    initial="hidden"
+                    animate="visible"
+                    custom={3}
+                  >
                     <p>{t("afterChatMessage2")}</p>
-                  </div>
+                  </motion.div>
                 </div>
 
                 <img src={afterChatPerson2} alt="after chat 2" />
 
-                <button onClick={() => setShowScreenIndex(2)}>
+                <motion.button
+                  onClick={() => setShowScreenIndex(2)}
+                  variants={messageVariants}
+                  initial="hidden"
+                  animate="visible"
+                  custom={2}
+                >
                   {t("afterChatButton1")}
-                </button>
+                </motion.button>
               </div>
             ) : showScreenIndex === 2 ? (
               <div

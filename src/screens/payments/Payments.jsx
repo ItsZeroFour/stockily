@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import style from "./style.module.scss";
 import { useTranslation } from "react-i18next";
 import { Link, useNavigate } from "react-router-dom";
-import afterChatPerson5 from "../../assets/images/after-chat-5.png";
+import afterChatPerson5 from "../../assets/images/main_person/1-1.png";
 import popular1 from "../../assets/images/popular/popular-1.png";
 import popular2 from "../../assets/images/popular/popular-2.png";
 import popular3 from "../../assets/images/popular/popular-3.png";
@@ -30,7 +30,7 @@ const Starter = () => {
             <img src={afterChatPerson5} alt="person" />
 
             <div className={style.payments__top__text}>
-              <h4>Mohammed Shami</h4>
+              <h4>Andi</h4>
               <p>{t("paymentsText")}</p>
             </div>
           </div>
