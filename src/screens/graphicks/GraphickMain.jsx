@@ -7,7 +7,7 @@ import { useTranslation } from "react-i18next";
 
 const GraphickMain = () => {
   const [showButton, setShowButton] = useState(false);
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   useEffect(() => {
     if (window.ym) {
@@ -28,7 +28,8 @@ const GraphickMain = () => {
       <div className="container">
         <div className={`wrapper ${style.graphick_main__wrapper}`}>
           <h1>
-            {t("graphick2Text")} <br /> <span>🗓️</span>
+            {t("graphick2Text")} <br /> 
+            {i18n.language !== 'bh' && <span>🗓️</span>}
           </h1>
 
           <Lottie

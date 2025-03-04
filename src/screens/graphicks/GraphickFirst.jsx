@@ -54,7 +54,7 @@ const GraphickFirst = () => {
           <div className={style.graphick_first__top}>
             <img src={afterChatPerson5} alt="person" />
             <div className={style.graphick_first__top__text}>
-              <h4>Andi</h4>
+              <h4>Andi Pratama</h4>
               <p>{t("graphickFirstText")}</p>
             </div>
           </div>

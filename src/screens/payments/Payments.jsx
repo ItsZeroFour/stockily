@@ -30,7 +30,7 @@ const Starter = () => {
             <img src={afterChatPerson5} alt="person" />
 
             <div className={style.payments__top__text}>
-              <h4>Andi</h4>
+              <h4>Andi Pratama</h4>
               <p>{t("paymentsText")}</p>
             </div>
           </div>
