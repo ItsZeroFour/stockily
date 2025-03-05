@@ -14,7 +14,7 @@ const banners = [
     link: "/conversion",
     image1: bannerImg1,
     image2: bannerImg2,
-    title: "Win iPhone 16 or $500",
+    title: "Win iphone 16 Pro",
   },
   {
     id: 2,

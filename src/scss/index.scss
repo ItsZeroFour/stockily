@@ -70,6 +70,10 @@ html {
   margin: 0 auto;
   overflow: hidden !important;
 
+  @media (max-height: 730px) {
+    height: 660px;
+  }
+
   @media (max-width: 450px) {
     width: 100vw;
     height: 100vh;
