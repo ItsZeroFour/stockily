@@ -4,14 +4,8 @@ import { Link } from "react-router-dom";
 import tab from "../../assets/images/Tab.png";
 import { useTranslation } from "react-i18next";
 
-const Final = () => {
+const Final = ({ redirectUrl }) => {
   const { t } = useTranslation();
-
-  const handleLeadTracking = () => {
-    if (window.ym) {
-      window.ym(100071464, "reachGoal", "Stockity");
-    }
-  };
 
   return (
     <section className={style.final}>
@@ -25,7 +19,7 @@ const Final = () => {
               <img src={tab} alt="tab" />
             </div>
 
-            <Link onClick={() => handleLeadTracking()} to="">
+            <Link to={redirectUrl} target="_blank">
               {t("finalButton")}
             </Link>
 
