@@ -1,11 +1,11 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import Main from "./screens/Main/Main";
 import FirstChat from "./screens/FirstChat/FirstChat";
 import Final from "./screens/final/Final";
 import Starter from "./screens/starter/Starter";
 import "./utils/i18n";
 import AfterChat from "./screens/after_chat/AfterChat";
-import { Suspense, useEffect } from "react";
+import { Suspense, useEffect, useState } from "react";
 import GroupChat from "./screens/group_chat/GroupChat";
 import afterChat1 from "./assets/images/after-chat-1.png";
 import afterChat2 from "./assets/images/after-chat-2.png";
@@ -30,6 +30,26 @@ function preloadImages(images) {
 }
 
 function App() {
+  const [redirectUrl, setRedirectUrl] = useState(() => {
+    return (
+      localStorage.getItem("redirectUrl") ||
+      "https://stockity.id/cashier?code=TRADINGHERO"
+    );
+  });
+  const location = useLocation();
+
+  useEffect(() => {
+    const searchParams = new URLSearchParams(location.search);
+    const paramsString = searchParams.toString();
+    if (paramsString) {
+      const newUrl = `https://stockity.id/cashier?code=TRADINGHERO&${paramsString}`;
+      setRedirectUrl(newUrl);
+      localStorage.setItem("redirectUrl", newUrl);
+    }
+  }, [location.search]);
+
+  console.log(redirectUrl);
+
   useEffect(() => {
     preloadImages([
       afterChat1,
@@ -59,8 +79,14 @@ function App() {
               <Route path="/graphick-first" element={<GraphickFirst />} />
               <Route path="/graphick-main" element={<GraphickMain />} />
               <Route path="/group-chat" element={<GroupChat />} />
-              <Route path="/final" element={<Final />} />
-              <Route path="/conversion" element={<Conversion />} />
+              <Route
+                path="/final"
+                element={<Final redirectUrl={redirectUrl} />}
+              />
+              <Route
+                path="/conversion"
+                element={<Conversion redirectUrl={redirectUrl} />}
+              />
             </Routes>
           </main>
         </div>

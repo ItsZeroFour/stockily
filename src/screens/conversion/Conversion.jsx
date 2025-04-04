@@ -4,19 +4,9 @@ import { Link, useNavigate } from "react-router-dom";
 import tab from "../../assets/images/Tab.png";
 import { useTranslation } from "react-i18next";
 
-const Conversion = () => {
+const Conversion = ({ redirectUrl }) => {
   const { t } = useTranslation();
   const navigate = useNavigate();
-
-  const handleLeadTracking = () => {
-    if (window.fbq !== undefined) {
-      window.fbq("track", "CompleteRegistration");
-    }
-
-    if (window.ym) {
-      window.ym(98661745, "reachGoal", "binomial_start");
-    }
-  };
 
   return (
     <section className={style.final}>
@@ -30,7 +20,7 @@ const Conversion = () => {
               <img src={tab} alt="tab" />
             </div>
 
-            <Link onClick={() => handleLeadTracking()} to="">
+            <Link to={redirectUrl} target="_blank">
               {t("finalButton")}
             </Link>
 
