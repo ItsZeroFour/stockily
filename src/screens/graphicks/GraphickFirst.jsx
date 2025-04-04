@@ -1,8 +1,8 @@
 import React, { useState, useRef, useEffect } from "react";
 import style from "./style.module.scss";
 import afterChatPerson5 from "../../assets/images/main_person/1-1.png";
-import graphickTop from "../../assets/graphicks/from_top_to_bottom.json";
-import graphickBottom from "../../assets/graphicks/from_bottom_to_top.json";
+import graphickTop from "../../assets/graphicks/from_bottom_to_top.json";
+import graphickBottom from "../../assets/graphicks/from_top_to_bottom.json";
 import Lottie from "lottie-react";
 import arrowTop from "../../assets/icons/arrow_top.svg";
 import arrowBottom from "../../assets/icons/arrow_bottom.svg";
