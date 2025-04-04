@@ -38,7 +38,12 @@ const Conversion = () => {
               <Link to="" onClick={() => navigate(-1)}>
                 {t("finalStay")}
               </Link>
-              <Link to="/">{t("finalRules")}</Link>
+              <Link
+                to="https://stockity.id/id/ad/tradinghero-rules"
+                target="_blank"
+              >
+                {t("finalRules")}
+              </Link>
             </div>
           </div>
         </div>

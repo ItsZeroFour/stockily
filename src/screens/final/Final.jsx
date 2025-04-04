@@ -31,7 +31,12 @@ const Final = () => {
 
             <div className={style.final__bottom}>
               <Link to="/">{t("finalStay")}</Link>
-              <Link to="/">{t("finalRules")}</Link>
+              <Link
+                to="https://stockity.id/id/ad/tradinghero-rules"
+                target="_blank"
+              >
+                {t("finalRules")}
+              </Link>
             </div>
           </div>
         </div>
