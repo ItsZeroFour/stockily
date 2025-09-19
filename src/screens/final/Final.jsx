@@ -3,6 +3,8 @@ import style from "./style.module.scss";
 import { Link } from "react-router-dom";
 import tab from "../../assets/images/Tab.png";
 import { useTranslation } from "react-i18next";
+import apple from "../../assets/icons/apple.svg";
+import gplay from "../../assets/icons/gplay.svg";
 
 const Final = ({ redirectUrl }) => {
   const { t } = useTranslation();
@@ -12,16 +14,34 @@ const Final = ({ redirectUrl }) => {
       <div className="container">
         <div className={`wrapper ${style.final__wrapper}`}>
           <div className={style.final__content}>
-            <h1>Register at Stockity.id</h1>
+            <h1>Start earning for real</h1>
             <p>{t("finalText")}</p>
+
+            <Link to="/">START TRADING</Link>
 
             <div className={style.final__img}>
               <img src={tab} alt="tab" />
             </div>
 
-            <Link to={redirectUrl} target="_blank">
-              {t("finalButton")}
-            </Link>
+            <div className={style.final__apps}>
+              <Link to="/">
+                <img src={apple} alt="app store" />
+
+                <div className={style.final__apps__text}>
+                  <p>Download on</p>
+                  <h4>App store</h4>
+                </div>
+              </Link>
+
+              <Link to="/">
+                <img src={gplay} alt="google play" />
+
+                <div className={style.final__apps__text}>
+                  <p>Download on</p>
+                  <h4>Google play</h4>
+                </div>
+              </Link>
+            </div>
 
             <div className={style.final__bottom}>
               <Link to="/">{t("finalStay")}</Link>

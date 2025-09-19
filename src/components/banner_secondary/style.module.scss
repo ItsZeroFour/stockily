@@ -1,9 +1,5 @@
 .banner {
-  background: linear-gradient(
-    180deg,
-    rgba(255, 115, 99, 1) 0%,
-    rgba(104, 115, 255, 1) 100%
-  );
+  background: var(--color-blue);
   height: 70px;
   width: 100%;
   position: relative;
@@ -13,18 +9,19 @@
 
 .banner__image {
   position: absolute;
-  width: 150px;
+  width: 70px;
   height: auto;
 
   &:first-child {
-    left: -80px;
-    top: 5px;
-    transform: scaleX(-1) rotate(-15deg);
+    left: 0px;
+    top: 2px;
+    transform: scaleX(-1) rotate(-25deg);
   }
 
   &:last-child {
     left: 330px;
-    top: 10px;
+    top: -10px;
+    transform: rotate(15deg);
   }
 }
 
@@ -41,9 +38,9 @@
   text-align: center;
 
   h2 {
-    font-size: 20px;
+    font-size: 18px;
     font-family: "NunitoSans-eb", sans-serif;
-    font-weight: 800;
+    font-weight: 600;
     display: flex;
     align-items: center;
     text-transform: uppercase;

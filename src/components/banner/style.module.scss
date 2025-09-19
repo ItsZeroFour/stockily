@@ -1,5 +1,5 @@
 .banner {
-  background: var(--color-white);
+  // background: var(--color-white);
   padding: 5px;
   border-radius: 5px;
   width: 90%;
@@ -11,14 +11,14 @@
   z-index: 999;
   margin: 10px;
 
-  & > a {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-  }
+  // & > a {
+  //   display: flex;
+  //   justify-content: space-between;
+  //   align-items: center;
+  //   width: 100%;
+  // }
 
-  & > a > a {
+  & > a {
     background: linear-gradient(
       180deg,
       rgba(255, 115, 99, 1) 0%,
