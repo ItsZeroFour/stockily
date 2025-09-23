@@ -20,10 +20,10 @@ const BannerSecondary = () => {
             <img src={gifs} className={style.banner__image} alt="banner" />
             <div className={style.banner__main}>
               <img src={bannerSecondaryLogo} alt="logo" />
-              <h2>Ready for luck?</h2>
+              <h2>Ready to earn?</h2>
               <p>
                 Warning: trading involves financial risks.{" "}
-                <Link to="/">Rules</Link>
+                {/* <Link to="/">Rules</Link> */}
               </p>
             </div>
             <img src={coins} className={style.banner__image} alt="banner" />

@@ -50,6 +50,10 @@
   & > p {
     margin-top: 10px;
 
+    span {
+      font-weight: 700;
+    }
+
     @media (max-width: 425px) {
       margin-top: 5px;
     }
@@ -107,11 +111,11 @@
         }
       }
 
-      &:last-child {
-        color: var(--color-blue);
-        text-decoration: underline;
-        margin-top: 10px;
-      }
+      // &:last-child {
+      //   color: var(--color-blue);
+      //   text-decoration: underline;
+      //   margin-top: 10px;
+      // }
     }
 
     @media (max-width: 450px) {

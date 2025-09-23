@@ -50,6 +50,10 @@
   & > p {
     margin-top: 10px;
 
+    span {
+      font-weight: 700;
+    }
+
     @media (max-width: 425px) {
       margin-top: 5px;
     }

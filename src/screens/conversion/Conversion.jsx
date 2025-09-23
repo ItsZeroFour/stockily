@@ -14,26 +14,33 @@ const Final = ({ redirectUrl }) => {
       <div className="container">
         <div className={`wrapper ${style.final__wrapper}`}>
           <div className={style.final__content}>
-            <h1>Start earning for real</h1>
-            <p>{t("finalText")}</p>
+            <h1>
+              Start earning <br /> for real
+            </h1>
+            <p>
+              Gandakan setoran pertama Anda — gunakan kode promo{" "}
+              <span>YOURHERO</span> ini untuk bonus 100%
+            </p>
 
-            <Link to="/">START TRADING</Link>
+            <Link to="https://tradesapp.tips/FGFJry" target="_blank">
+              START TRADING
+            </Link>
 
             <div className={style.final__img}>
               <img src={tab} alt="tab" />
             </div>
 
             <div className={style.final__apps}>
-              <Link to="/">
+              {/* <Link to="/">
                 <img src={apple} alt="app store" />
 
                 <div className={style.final__apps__text}>
                   <p>Download on</p>
                   <h4>App store</h4>
                 </div>
-              </Link>
+              </Link> */}
 
-              <Link to="/">
+              <Link to="https://tradesapp.tips/4K5RTQ3C" target="_blank">
                 <img src={gplay} alt="google play" />
 
                 <div className={style.final__apps__text}>
@@ -45,12 +52,12 @@ const Final = ({ redirectUrl }) => {
 
             <div className={style.final__bottom}>
               <Link to="/">{t("finalStay")}</Link>
-              <Link
+              {/* <Link
                 to="https://stockity.id/id/ad/tradinghero-rules"
                 target="_blank"
               >
                 {t("finalRules")}
-              </Link>
+              </Link> */}
             </div>
           </div>
         </div>
