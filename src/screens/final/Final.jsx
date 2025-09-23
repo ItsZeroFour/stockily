@@ -19,10 +19,10 @@ const Final = ({ redirectUrl }) => {
             </h1>
             <p>
               Gandakan setoran pertama Anda — gunakan kode promo{" "}
-              <span>YOURHERO</span> ini untuk bonus 100%
+              <span>TRADEHERO</span> ini untuk bonus 100%
             </p>
 
-            <Link to="https://tradesapp.tips/FGFJry" target="_blank">
+            <Link to="https://tradesapp.tips/bpzd47bG" target="_blank">
               START TRADING
             </Link>
 
@@ -40,7 +40,7 @@ const Final = ({ redirectUrl }) => {
                 </div>
               </Link> */}
 
-              <Link to="https://tradesapp.tips/4K5RTQ3C" target="_blank">
+              <Link to="https://tradesapp.tips/8239XrR8" target="_blank">
                 <img src={gplay} alt="google play" />
 
                 <div className={style.final__apps__text}>
