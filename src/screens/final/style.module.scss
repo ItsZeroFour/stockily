@@ -111,11 +111,11 @@
         }
       }
 
-      &:last-child {
-        color: var(--color-blue);
-        text-decoration: underline;
-        margin-top: 10px;
-      }
+      // &:last-child {
+      //   color: var(--color-blue);
+      //   text-decoration: underline;
+      //   margin-top: 10px;
+      // }
     }
 
     @media (max-width: 450px) {
@@ -133,8 +133,11 @@
     padding: 10px 20px;
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 10px;
     border-radius: 50px;
+    width: 100%;
+    text-align: center;
 
     .final__apps__text {
       p,

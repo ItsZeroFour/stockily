@@ -133,8 +133,11 @@
     padding: 10px 20px;
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 10px;
     border-radius: 50px;
+    width: 100%;
+    text-align: center;
 
     .final__apps__text {
       p,
