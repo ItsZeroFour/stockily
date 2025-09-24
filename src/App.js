@@ -29,26 +29,57 @@ function preloadImages(images) {
   });
 }
 
-function App() {
-  const [redirectUrl, setRedirectUrl] = useState(() => {
-    return (
-      localStorage.getItem("redirectUrl") ||
-      "https://stockity.id/cashier?code=TRADINGHERO"
-    );
-  });
-  const location = useLocation();
+function extractUtmParams() {
+  const params = new URLSearchParams(window.location.search);
+  const utmParams = {};
 
-  useEffect(() => {
-    const searchParams = new URLSearchParams(location.search);
-    const paramsString = searchParams.toString();
-    if (paramsString) {
-      const newUrl = `https://stockity.id/cashier?code=TRADINGHERO&${paramsString}`;
-      setRedirectUrl(newUrl);
-      localStorage.setItem("redirectUrl", newUrl);
+  const utmKeys = ["source", "medium", "campaign", "a", "ac", "sa"];
+
+  utmKeys.forEach((key) => {
+    const value = params.get(key);
+    if (value) {
+      utmParams[key] = value;
     }
-  }, [location.search]);
+  });
 
-  console.log(redirectUrl);
+  return Object.keys(utmParams).length > 0 ? utmParams : null;
+}
+
+// Функция для сохранения UTM-параметров в localStorage
+function saveUtmParams(utmParams) {
+  if (utmParams) {
+    localStorage.setItem("utm_params", JSON.stringify(utmParams));
+  }
+}
+
+// Функция для получения UTM-параметров из localStorage
+function getUtmParams() {
+  try {
+    const stored = localStorage.getItem("utm_params");
+    return stored ? JSON.parse(stored) : null;
+  } catch (e) {
+    console.error("Error parsing UTM params from localStorage:", e);
+    return null;
+  }
+}
+
+// Функция для добавления UTM-параметров к URL
+export function addUtmToUrl(url) {
+  const utmParams = getUtmParams();
+  if (!utmParams || Object.keys(utmParams).length === 0) {
+    return url;
+  }
+
+  const urlObj = new URL(url, window.location.origin);
+  Object.entries(utmParams).forEach(([key, value]) => {
+    urlObj.searchParams.set(key, value);
+  });
+
+  return urlObj.toString();
+}
+
+function App() {
+  const location = useLocation();
 
   useEffect(() => {
     preloadImages([
@@ -59,6 +90,13 @@ function App() {
       afterChat5,
       afterChat6,
     ]);
+  }, []);
+
+  useEffect(() => {
+    const utmParams = extractUtmParams();
+    if (utmParams) {
+      saveUtmParams(utmParams);
+    }
   }, []);
 
   return (
@@ -79,14 +117,8 @@ function App() {
               <Route path="/graphick-first" element={<GraphickFirst />} />
               <Route path="/graphick-main" element={<GraphickMain />} />
               <Route path="/group-chat" element={<GroupChat />} />
-              <Route
-                path="/final"
-                element={<Final redirectUrl={redirectUrl} />}
-              />
-              <Route
-                path="/conversion"
-                element={<Conversion redirectUrl={redirectUrl} />}
-              />
+              <Route path="/final" element={<Final />} />
+              <Route path="/conversion" element={<Conversion />} />
             </Routes>
           </main>
         </div>
