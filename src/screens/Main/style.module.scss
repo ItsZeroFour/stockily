@@ -38,6 +38,18 @@
       justify-content: space-between;
       width: 185px;
 
+      .main__button__down {
+        p {
+          color: #ff0000;
+        }
+      }
+
+      .main__button__up {
+        p {
+          color: #34c759;
+        }
+      }
+
       .main__button__down,
       .main__button__up {
         text-align: center;

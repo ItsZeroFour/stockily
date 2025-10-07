@@ -28,7 +28,7 @@ const Gift = () => {
             </div>
 
             <h4>Samsung 56gn12 TV</h4>
-            <h2>2 000 000 Rp</h2>
+            <h2>50 000KS</h2>
 
             <Link to="">{t("giftReviews")}</Link>
           </div>

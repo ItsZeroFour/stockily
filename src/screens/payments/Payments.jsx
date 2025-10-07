@@ -12,6 +12,7 @@ import popular6 from "../../assets/images/popular/popular-6.png";
 import popular7 from "../../assets/images/popular/popular-7.png";
 import popular8 from "../../assets/images/popular/popular-8.png";
 import popular9 from "../../assets/images/popular/popular-9.png";
+import paymentsImg from "../../assets/images/payments.png";
 
 const Starter = () => {
   const { t } = useTranslation();
@@ -30,7 +31,7 @@ const Starter = () => {
             <img src={afterChatPerson5} alt="person" />
 
             <div className={style.payments__top__text}>
-              <h4>Andi Pratama</h4>
+              <h4>Daniel Onyango</h4>
               <p>{t("paymentsText")}</p>
             </div>
           </div>
@@ -38,7 +39,9 @@ const Starter = () => {
           <div className={style.payments__list}>
             <p>Popular</p>
 
-            <ul>
+            <img src={paymentsImg} alt="payments" />
+
+            {/* <ul>
               <li>
                 <img src={popular1} alt="popular payment" />
               </li>
@@ -74,7 +77,7 @@ const Starter = () => {
               <li>
                 <img src={popular9} alt="popular payment" />
               </li>
-            </ul>
+            </ul> */}
           </div>
 
           <Link to="/graphick-first">{t("paymentsButton")}</Link>

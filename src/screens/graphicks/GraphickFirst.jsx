@@ -54,7 +54,7 @@ const GraphickFirst = () => {
           <div className={style.graphick_first__top}>
             <img src={afterChatPerson5} alt="person" />
             <div className={style.graphick_first__top__text}>
-              <h4>Andi Pratama</h4>
+              <h4>Daniel Onyango</h4>
               <p>{t("graphickFirstText")}</p>
             </div>
           </div>
@@ -62,7 +62,7 @@ const GraphickFirst = () => {
           <div className={style.graphick_first__balance}>
             <p>Your demo balance</p>
             <div className={style.graphick_first__balance__main}>
-              <h2>50000RP</h2>
+              <h2>5000KS</h2>
               <div>
                 <p>EUR/USD</p>
               </div>

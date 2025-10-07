@@ -33,9 +33,13 @@
 }
 
 .final__content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   z-index: 1;
   padding: 20px;
   width: 100%;
+  position: relative;
 
   h1 {
     font-family: "Nunito-sans-eb";
@@ -95,7 +99,8 @@
     flex-direction: column;
     align-items: center;
     color: #1e1e1e;
-    margin-top: 10px;
+    margin-top: auto;
+    z-index: 9;
 
     a {
       &:first-child {
@@ -119,8 +124,31 @@
     }
 
     @media (max-width: 450px) {
-      margin-bottom: -80px;
+      margin-bottom: 80px;
     }
+  }
+
+  & > img {
+    position: absolute;
+    left: -45%;
+    width: 800px;
+    top: 35%;
+  }
+}
+
+.final__promo__main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--color-white);
+  color: #1e1e1e;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+
+  p {
+    font-weight: 500;
+    font-family: "Nunito-sans-md", sans-serif;
   }
 }
 

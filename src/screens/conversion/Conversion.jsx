@@ -5,9 +5,11 @@ import tab from "../../assets/images/Tab.png";
 import { useTranslation } from "react-i18next";
 import apple from "../../assets/icons/apple.svg";
 import gplay from "../../assets/icons/gplay.svg";
+import { useNavigate } from "react-router-dom";
 
 const Final = ({ redirectUrl }) => {
   const { t } = useTranslation();
+  const navigate = useNavigate();
 
   return (
     <section className={style.final}>
@@ -19,10 +21,10 @@ const Final = ({ redirectUrl }) => {
             </h1>
             <p>
               Gandakan setoran pertama Anda — gunakan kode promo{" "}
-              <span>TRADEHERO</span> ini untuk bonus 100%
+              <span>FIRSTHERO</span> ini untuk bonus 100%
             </p>
 
-            <Link to="https://tradesapp.tips/bpzd47bG" target="_blank">
+            <Link to="https://tradesapp.tips/6P9pSmPd" target="_blank">
               START TRADING
             </Link>
 
@@ -40,7 +42,7 @@ const Final = ({ redirectUrl }) => {
                 </div>
               </Link> */}
 
-              <Link to="https://tradesapp.tips/8239XrR8" target="_blank">
+              <Link to="https://tradesapp.tips/w6FxZwZj" target="_blank">
                 <img src={gplay} alt="google play" />
 
                 <div className={style.final__apps__text}>
@@ -51,7 +53,9 @@ const Final = ({ redirectUrl }) => {
             </div>
 
             <div className={style.final__bottom}>
-              <Link to="/">{t("finalStay")}</Link>
+              <Link to="" onClick={() => navigate(-1)}>
+                {t("finalStay")}
+              </Link>
               {/* <Link
                 to="https://stockity.id/id/ad/tradinghero-rules"
                 target="_blank"

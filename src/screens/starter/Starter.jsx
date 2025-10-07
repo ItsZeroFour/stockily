@@ -35,19 +35,7 @@ const Starter = () => {
                 }
               }}
             >
-              English
-            </button>
-            <button
-              onClick={() => {
-                changeLanguage("bh");
-                navigate("/main");
-
-                if (window.ym) {
-                  window.ym(100071464, "reachGoal", "bahasa");
-                }
-              }}
-            >
-              Bahasa
+              Start
             </button>
           </div>
         </div>

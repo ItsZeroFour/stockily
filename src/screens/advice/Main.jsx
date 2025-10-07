@@ -19,7 +19,7 @@ const Main = () => {
           <div className={style.advice_main__top}>
             <img src={afterChatPerson5} alt="person" />
             <div className={style.advice_main__top__text}>
-              <h4>Andi Pratama</h4>
+              <h4>Daniel Onyango</h4>
               <p>{t("adviceText2")}</p>
             </div>
           </div>
