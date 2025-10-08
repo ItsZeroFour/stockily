@@ -24,7 +24,6 @@ const Gift = () => {
           <div className={style.gift__characteristicks}>
             <div className={style.gift__top}>
               <p>Product Code: 2002220</p>
-              <p>4.9</p>
             </div>
 
             <h4>Samsung 56gn12 TV</h4>
