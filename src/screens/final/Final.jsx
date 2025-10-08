@@ -5,6 +5,7 @@ import tab from "../../assets/images/Tab.png";
 import { useTranslation } from "react-i18next";
 import mainImg from "../../assets/images/main_person/1.png";
 import arrow from "../../assets/icons/final-arrow.svg";
+import gplay from "../../assets/icons/gplay.svg";
 
 const Final = ({ redirectUrl }) => {
   const { t } = useTranslation();
@@ -20,11 +21,11 @@ const Final = ({ redirectUrl }) => {
               <p>Start your way with our promocodes:</p>
 
               <Link
-                to="https://tradesapp.tips/6P9pSmPd"
+                to="https://tradesapp.tips/3QSBsQGG"
                 target="_blank"
                 className={style.final__promo__main}
               >
-                <p>FIRSTHERO</p>
+                <p>GAMEHERO</p>
                 <img src={arrow} alt="arrow" />
               </Link>
             </div>
@@ -38,7 +39,16 @@ const Final = ({ redirectUrl }) => {
             <img src={mainImg} alt="main" />
 
             <div className={style.final__bottom}>
-              <Link to="https://tradesapp.tips/6P9pSmPd" target="_blank">
+              <Link to="https://tradesapp.tips/8XK7xTF5" target="_blank">
+                <img src={gplay} alt="google play" />
+
+                <div className={style.final__apps__text}>
+                  <p>Download on</p>
+                  <h4>Google play</h4>
+                </div>
+              </Link>
+
+              <Link to="https://tradesapp.tips/3QSBsQGG" target="_blank">
                 Go to Stockity
               </Link>
               {/* <Link

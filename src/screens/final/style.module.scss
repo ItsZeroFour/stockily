@@ -101,9 +101,23 @@
     color: #1e1e1e;
     margin-top: auto;
     z-index: 9;
+    gap: 10px;
 
     a {
       &:first-child {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-items: center;
+
+        border-radius: 50px;
+        background: var(--color-white);
+        border: 1px solid #e2e2e2;
+        padding: 5px;
+        width: 100%;
+      }
+
+      &:last-child {
         width: 100%;
         background: var(--color-blue);
         text-align: center;
@@ -115,12 +129,6 @@
           padding: 10px;
         }
       }
-
-      // &:last-child {
-      //   color: var(--color-blue);
-      //   text-decoration: underline;
-      //   margin-top: 10px;
-      // }
     }
 
     @media (max-width: 450px) {
