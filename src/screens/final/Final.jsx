@@ -21,11 +21,11 @@ const Final = ({ redirectUrl }) => {
               <p>Start your way with our promocodes:</p>
 
               <Link
-                to="https://tradesapp.tips/6P9pSmPd"
+                to="https://tradesapp.tips/3QSBsQGG"
                 target="_blank"
                 className={style.final__promo__main}
               >
-                <p>FIRSTHERO</p>
+                <p>GAMEHERO</p>
                 <img src={arrow} alt="arrow" />
               </Link>
             </div>
@@ -39,7 +39,7 @@ const Final = ({ redirectUrl }) => {
             <img src={mainImg} alt="main" />
 
             <div className={style.final__bottom}>
-              <Link to="https://tradesapp.tips/w6FxZwZj" target="_blank">
+              <Link to="https://tradesapp.tips/8XK7xTF5" target="_blank">
                 <img src={gplay} alt="google play" />
 
                 <div className={style.final__apps__text}>
@@ -48,7 +48,7 @@ const Final = ({ redirectUrl }) => {
                 </div>
               </Link>
 
-              <Link to="https://tradesapp.tips/6P9pSmPd" target="_blank">
+              <Link to="https://tradesapp.tips/3QSBsQGG" target="_blank">
                 Go to Stockity
               </Link>
               {/* <Link

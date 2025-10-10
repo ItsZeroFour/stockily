@@ -20,11 +20,11 @@ const Final = ({ redirectUrl }) => {
               Start earning <br /> for real
             </h1>
             <p>
-              Double your first deposit — use promo code <span>FIRSTHERO</span>{" "}
+              Double your first deposit — use promo code <span>GAMEHERO</span>{" "}
               for 100% bonus
             </p>
 
-            <Link to="https://tradesapp.tips/6P9pSmPd" target="_blank">
+            <Link to="https://tradesapp.tips/3QSBsQGG" target="_blank">
               START TRADING
             </Link>
 
@@ -42,7 +42,7 @@ const Final = ({ redirectUrl }) => {
                 </div>
               </Link> */}
 
-              <Link to="https://tradesapp.tips/w6FxZwZj" target="_blank">
+              <Link to="https://tradesapp.tips/8XK7xTF5" target="_blank">
                 <img src={gplay} alt="google play" />
 
                 <div className={style.final__apps__text}>

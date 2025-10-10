@@ -4,7 +4,7 @@ import logo from "../../assets/images/logo_2.svg";
 import afterChatImg from "../../assets/images/after_chat.png";
 import afterChatPerson1 from "../../assets/images/after-chat-1.png";
 import afterChatPerson2 from "../../assets/images/main_person/1-1.png";
-import afterChatPerson3 from "../../assets/images/main_person/5.png";
+import afterChatPerson3 from "../../assets/images/main_person/1.png";
 import afterChatPerson4 from "../../assets/images/main_person/4.png";
 import afterChatPerson5 from "../../assets/images/after-chat-5.png";
 import tabImg from "../../assets/images/Tab.png";
